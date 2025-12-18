@@ -45,7 +45,8 @@ Ahora, tenemos que configurar la máquina virtual(instancia) que vamos a crear y
 
 Dentro del campo ‘Configuración de red’ pulsamos en **‘Editar’** y rellenamos los campos tal cual aparecen en la siguiente imagen: 
 
-<img width="940" height="763" alt="image" src="https://github.com/user-attachments/assets/d2ebc9d5-4d1e-4387-912f-b31839ce393c" /> 
+<img width="940" height="763" alt="image" src="https://github.com/user-attachments/assets/d2ebc9d5-4d1e-4387-912f-b31839ce393c" />  
+
 Finalmente, pulsamos en **‘Lanzar instancia’** para terminar de crear la instancia. 
 
 Y podemos ver el mensaje de que la instancia se lanzó (creó) correctamente. 
@@ -54,16 +55,20 @@ Y podemos ver el mensaje de que la instancia se lanzó (creó) correctamente.
 
 <img width="940" height="212" alt="image" src="https://github.com/user-attachments/assets/5e9839e3-bbdb-4397-b2d3-56f54fa2c1f5" /> 
 
-Ahora, necesitamos conectarnos con la instancia vía SSH. 
+Ahora, necesitamos conectarnos con la instancia vía SSH.  
 
-Para ello necesito la clave **vockey**. Esta nos la descargamos de : 
+
+Para ello necesito la clave **vockey**. Esta nos la descargamos de :  
+
 
 <img width="940" height="355" alt="image" src="https://github.com/user-attachments/assets/2973cc63-859d-4a3d-9e04-ea87d5a464cd" /> 
 Y se nos descarga en nuestra carpeta Descargas de nuestro PC. Ahora abrimos el terminal de nuestro PC, nos desplazamos a la carpeta donde está el archivo **vockey** y desde ella, lanzamos el siguiente comando **ssh -i “labsuser.pem” admin@Ip_pública_de_la_instancia** 
 
 
+
 <img width="940" height="345" alt="image" src="https://github.com/user-attachments/assets/48db8261-1d70-4146-b0e7-4179cf69e95f" /> 
-Me está diciendo que es la primera vez que queremos conectar con este servidor y no lo conozco. ¿Te fías? Le decimos que sí ya que es el servidor que acabamos de crear. Respondemos con **yes**. 
+Me está diciendo que es la primera vez que queremos conectar con este servidor y no lo conozco. ¿Te fías? Le decimos que sí ya que es el servidor que acabamos de crear. Respondemos con **yes**.  
+
 
 Pero me da una advertencia y se refiere a que SSH se niega a utilizar la llave **‘labsuser.pem’** si además del propietario pueden usarla otros. Por tanto, tenemos que cambiar los permisos sobre este archivo y ponerlo que solo nosotros podemos usarlo. 
 
