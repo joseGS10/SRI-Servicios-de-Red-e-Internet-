@@ -2,7 +2,7 @@
 # Instalación de WordPress en instancia Linux(EC2) con soporte de base de datos RDS y almacenamiento EFS. 
 El objetivo de esta práctica es montar un sitio web con WordPress, una base de datos (RDS) donde WordPress guardará la información, un disco compartido en red (EFS) donde WordPress guardará imágenes y archivos y todo ello dentro de una red privada de AWS (VPC). 
 
-##**PASO_1.** Creación de la VPC## 
+## **PASO_1.** Creación de la VPC 
 
 
 Lo primero de todo es crear la red donde vivirá todo. Lo que haremos será crear una VPC con 2 subredes públicas y 2 subredes privadas y para ello, utilizaremos el asistente automático de AWS.  
@@ -29,10 +29,11 @@ Pasamos a la ventana de configuración de la VPC en la que al tratarse de la cre
 
 Esperamos unos segundos a que se cree la VPC y pulsamos el botón naranja **‘Ver VPC’** y ya podemos visualizar las características de la VPC creada. 
 
-<img width="940" height="556" alt="image" src="https://github.com/user-attachments/assets/de0b3728-0310-4fde-90eb-18caf23eba8e" /> 
+<img width="940" height="556" alt="image" src="https://github.com/user-attachments/assets/de0b3728-0310-4fde-90eb-18caf23eba8e" />  
+
 
  
-**PASO_2.** Creación de instancias EC2.(Servidores) 
+## **PASO_2.** Creación de instancias EC2.(Servidores) 
 
 Vamos a lanzar una instancia con Debian en la subred pública 1. La llamaremos **‘servidorwordpress’** . Para ello, nos vamos al buscador de servicios, y buscamos EC2 y entramos. Pulsamos sobre el botón naranja **‘Lanzar instancia’** . 
 
@@ -70,8 +71,9 @@ Y por fin, después de aplicar los permisos sobre el fichero claves para mi usua
 
 <img width="940" height="101" alt="image" src="https://github.com/user-attachments/assets/946a715c-5ef1-4095-a2fc-e27a596f7dd8" />  
 
+
  
-**PASO_3.** Instalación de Apache y PHP 
+## **PASO_3.** Instalación de Apache y PHP 
 
 **Instalación de Apache** 
 
@@ -108,10 +110,11 @@ Para la instalación de PHP ejecutamos los siguientes comandos:
 Y comprobamos que PHP está instalado con **php -v** 
 
 
-<img width="940" height="215" alt="image" src="https://github.com/user-attachments/assets/84f89186-6911-42ca-b73f-758bb2cf1be5" /> 
+<img width="940" height="215" alt="image" src="https://github.com/user-attachments/assets/84f89186-6911-42ca-b73f-758bb2cf1be5" />  
+
 
  
-**PASO_4.** Creación de la base de datos (RDS) 
+## **PASO_4.** Creación de la base de datos (RDS) 
 
 Para ello, nos vamos al buscador del panel AWS y buscamos RDS para crear una base de datos. 
 
@@ -173,10 +176,11 @@ Volvemos a intentar conectarnos, pero esta vez con el certificado ya bajado.
 **mysql -h bdwordpress.cs5csmppcz34.us-east-1.rds.amazonaws.com -u admin -p --ssl-ca=global-bundle.pem** 
 
 
-<img width="941" height="239" alt="image" src="https://github.com/user-attachments/assets/8811e789-b09a-46da-bfdd-b0e1b9846e25" /> 
+<img width="941" height="239" alt="image" src="https://github.com/user-attachments/assets/8811e789-b09a-46da-bfdd-b0e1b9846e25" />  
+
 
  
-**PASO_5.** Creación de Elastic File System(EFS) 
+## **PASO_5.** Creación de Elastic File System(EFS) 
 
 EFS es un sistema de almacenamiento externo(como un disco duro compartido) que conectaremos a la instancia y que más tarde conectaremos a wordpress. Este disco colgará de la carpeta **/var/www/html** del servidor Debian. WordPress vivirá en este disco externo resistente a fallos. 
 
@@ -292,11 +296,12 @@ Le damos los datos que nos solicitan y seguimos el asistente hasta que se comple
 <img width="940" height="1008" alt="image" src="https://github.com/user-attachments/assets/05dd2ef9-c546-46f5-894a-093c5c28b1ad" /> 
 
 
-<img width="940" height="413" alt="image" src="https://github.com/user-attachments/assets/b3f2cc51-36b9-4300-b448-76dae187230f" /> 
+<img width="940" height="413" alt="image" src="https://github.com/user-attachments/assets/b3f2cc51-36b9-4300-b448-76dae187230f" />  
+
 
  
 
-**PASO_7.** Conexión de EFS a directorio WP_content. 
+## **PASO_7.** Conexión de EFS a directorio WP_content. 
 
 Vamos a ejecutar los siguientes comandos: 
 
