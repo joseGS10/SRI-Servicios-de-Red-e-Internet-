@@ -66,7 +66,8 @@ Pero me da una advertencia y se refiere a que SSH se niega a utilizar la llave *
 
 Y por fin, después de aplicar los permisos sobre el fichero claves para mi usuario solo, conseguimos entrar en la instancia. 
 
-<img width="940" height="101" alt="image" src="https://github.com/user-attachments/assets/946a715c-5ef1-4095-a2fc-e27a596f7dd8" /> 
+<img width="940" height="101" alt="image" src="https://github.com/user-attachments/assets/946a715c-5ef1-4095-a2fc-e27a596f7dd8" />  
+
 **PASO_3.** Instalación de Apache y PHP 
 
 **Instalación de Apache** 
@@ -341,13 +342,11 @@ Y si volvemos a entrar en nuestro navegador y colocar la IP pública podemos ver
 **Si en un futuro queremos desmontar esta infraestructura recién creada deberíamos seguir los siguientes pasos:** 
 
 1.	Desmontamos el EFS  con  **sudo umount /var/www/html/wp-content**
-2.	
-3.	Terminar la instancia ECS (la elimina) : Para ello, es estado de la instancia seleccionamos **‘Terminar’**
-4.	
-5.	Borramos la EFS (almacenamiento).
-6.	
-7.	Borramos la RDS (base de datos).
-8.	
+2.	Terminar la instancia ECS (la elimina) : Para ello, es estado de la instancia seleccionamos **‘Terminar’**
+3.	Borramos la EFS (almacenamiento).
+4.	Borramos la RDS (base de datos).
+  
+	
 
 
 
