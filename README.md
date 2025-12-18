@@ -17,5 +17,5 @@ Servicios de Red e Internet
 [Practica](/Practica/Servidor_web_instituto.md) | Práctica final Servidor Web Instituto |
 
 # Practicando con AWS
-| [Actividad_01](/TEMA1/Actividad01.md) | Instalación de WordPress en EC2 con RDS y EFS
+| [Instalacion_WordPress](/Practicando con AWS/Instalacion_WordPress.md) | Instalación de WordPress en EC2 con RDS y EFS
 |
