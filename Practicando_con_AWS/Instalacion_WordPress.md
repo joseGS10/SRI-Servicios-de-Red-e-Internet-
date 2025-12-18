@@ -2,7 +2,7 @@
 # Instalación de WordPress en instancia Linux(EC2) con soporte de base de datos RDS y almacenamiento EFS. 
 El objetivo de esta práctica es montar un sitio web con WordPress, una base de datos (RDS) donde WordPress guardará la información, un disco compartido en red (EFS) donde WordPress guardará imágenes y archivos y todo ello dentro de una red privada de AWS (VPC). 
 
-## **PASO_1.** Creación de la VPC 
+## PASO_1. Creación de la VPC 
 
 
 Lo primero de todo es crear la red donde vivirá todo. Lo que haremos será crear una VPC con 2 subredes públicas y 2 subredes privadas y para ello, utilizaremos el asistente automático de AWS.  
@@ -33,7 +33,7 @@ Esperamos unos segundos a que se cree la VPC y pulsamos el botón naranja **‘V
 
 
  
-## **PASO_2.** Creación de instancias EC2.(Servidores) 
+## PASO_2. Creación de instancias EC2.(Servidores) 
 
 Vamos a lanzar una instancia con Debian en la subred pública 1. La llamaremos **‘servidorwordpress’** . Para ello, nos vamos al buscador de servicios, y buscamos EC2 y entramos. Pulsamos sobre el botón naranja **‘Lanzar instancia’** . 
 
@@ -73,7 +73,7 @@ Y por fin, después de aplicar los permisos sobre el fichero claves para mi usua
 
 
  
-## **PASO_3.** Instalación de Apache y PHP 
+## PASO_3. Instalación de Apache y PHP 
 
 **Instalación de Apache** 
 
@@ -114,7 +114,7 @@ Y comprobamos que PHP está instalado con **php -v**
 
 
  
-## **PASO_4.** Creación de la base de datos (RDS) 
+## PASO_4. Creación de la base de datos (RDS) 
 
 Para ello, nos vamos al buscador del panel AWS y buscamos RDS para crear una base de datos. 
 
@@ -180,7 +180,7 @@ Volvemos a intentar conectarnos, pero esta vez con el certificado ya bajado.
 
 
  
-## **PASO_5.** Creación de Elastic File System(EFS) 
+## PASO_5. Creación de Elastic File System(EFS) 
 
 EFS es un sistema de almacenamiento externo(como un disco duro compartido) que conectaremos a la instancia y que más tarde conectaremos a wordpress. Este disco colgará de la carpeta **/var/www/html** del servidor Debian. WordPress vivirá en este disco externo resistente a fallos. 
 
@@ -232,7 +232,7 @@ Se solucionó añadiendo la opción explícita **addr=10.0.138.91**. Esto fuerza
 
 
 
-**PASO_6.** Descarga e Instalación de WordPress. 
+## PASO_6. Descarga e Instalación de WordPress. 
 
 Vamos a descargar los archivos de instalación de wordpress en **/tmp** 
 
@@ -301,7 +301,7 @@ Le damos los datos que nos solicitan y seguimos el asistente hasta que se comple
 
  
 
-## **PASO_7.** Conexión de EFS a directorio WP_content. 
+## PASO_7. Conexión de EFS a directorio WP_content. 
 
 Vamos a ejecutar los siguientes comandos: 
 
