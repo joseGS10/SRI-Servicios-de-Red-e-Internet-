@@ -10,7 +10,8 @@ Lo primero de todo es crear la red donde vivirá todo. Lo que haremos será crea
 Entramos en nuestra consola de AWS, en la barra de búsqueda escribimos VPC y en el listado de servicios que aparecen, sobre el servicio VPC, seleccionamos ‘Sus VPC’.  
 El objetivo de esta práctica es montar un sitio web con WordPress, una base de datos (RDS) donde WordPress guardará la información, un disco compartido en red (EFS) donde WordPress guardará imágenes y archivos y todo ello dentro de una red privada de AWS (VPC).
 
-<img width="940" height="296" alt="image" src="https://github.com/user-attachments/assets/b26e5f25-fe86-4881-b954-777069d14699" /> 
+<img width="940" height="296" alt="image" src="https://github.com/user-attachments/assets/b26e5f25-fe86-4881-b954-777069d14699" />  
+
 En la ventana que se abre donde deberían aparecer las VPC que tenemos creadas, pulsamos el botón naranja ‘Crear VPC’ 
 
 
@@ -38,7 +39,8 @@ Esperamos unos segundos a que se cree la VPC y pulsamos el botón naranja **‘V
 Vamos a lanzar una instancia con Debian en la subred pública 1. La llamaremos **‘servidorwordpress’** . Para ello, nos vamos al buscador de servicios, y buscamos EC2 y entramos. Pulsamos sobre el botón naranja **‘Lanzar instancia’** . 
 
 
-<img width="940" height="409" alt="image" src="https://github.com/user-attachments/assets/45ea29b6-7370-4cba-b5b6-5e82b921a562" /> 
+<img width="940" height="409" alt="image" src="https://github.com/user-attachments/assets/45ea29b6-7370-4cba-b5b6-5e82b921a562" />  
+
 Ahora, tenemos que configurar la máquina virtual(instancia) que vamos a crear y le otorgaremos las siguientes características marcadas en los recuadros: 
 
 <img width="940" height="766" alt="image" src="https://github.com/user-attachments/assets/749e4893-9f2d-4aeb-bcd3-78a3d9801008" /> 
@@ -168,7 +170,8 @@ Estamos dentro de nuestra EC2. Debemos ejecutar:
 
 **mysql -h dns-bbdd -u admin -p** 
 
-<img width="940" height="83" alt="image" src="https://github.com/user-attachments/assets/19e500c8-3cbe-4157-a8b9-75ad6a224b0a" /> 
+<img width="940" height="83" alt="image" src="https://github.com/user-attachments/assets/19e500c8-3cbe-4157-a8b9-75ad6a224b0a" />  
+
 Me suelta este mensaje de error. Nuestro cliente de base de datos está intentado conectar de forma segura(cifrada) pero no reconoce el certificado seguridad de Amazon. 
 
 Pasamos a descargarnos el certificado oficial de Amazon con el siguiente comando: 
@@ -200,10 +203,12 @@ Seguidamente, pulsamos en el botón **‘Crear un sistema de archivos’**
 La configuración de dicho sistema de almacenamiento aparece remarcada en la siguiente imagen: 
 
 
-<img width="940" height="958" alt="image" src="https://github.com/user-attachments/assets/e089e063-e94a-4afe-976f-fcd8ba57bdfe" /> 
+<img width="940" height="958" alt="image" src="https://github.com/user-attachments/assets/e089e063-e94a-4afe-976f-fcd8ba57bdfe" />  
+
 Y terminamos pulsando en **‘Crear un sistema de archivos’**. Podemos verlo creado en la siguiente imagen. 
 
-<img width="940" height="310" alt="image" src="https://github.com/user-attachments/assets/09ac097f-5544-47a4-888a-804813c500b6" /> 
+<img width="940" height="310" alt="image" src="https://github.com/user-attachments/assets/09ac097f-5544-47a4-888a-804813c500b6" />  
+
 Al igual que la base de datos, el EFS tiene un firewall que por defecto bloquea cualquier intento de acceso. Hay que permitir que la instancia del servidor pueda entrar por lo que en el grupo de seguridad habrá que especificar una regla de entrada a tal efecto. 
 
 Para ello, clicamos en el nombre de la EFS recién creada **’almacenamiento-wordpress’** , nos aparece una ventana con las diferentes configuraciones de la EFS. Picamos en la pestaña **Red** y vemos que nos aparecen 2 grupos de seguridad, pero en realidad es uno (ya que AWS lo replica por seguridad en 2 zonas distintas).Pinchamos en el enlace azul (ID de VPC) de cualquiera de ellos. Ahora en el panel lateral izquierdo vos vamos a **Seguridad / Grupos de Seguridad**. Nos aparecen un listado con todos los grupos de seguridad creados. Marcamos la casilla del ID equivalente al enlace azul que picamos anteriormente. Ahora en la parte de debajo de la pantalla picamos en ‘Reglas de entrada’. 
@@ -213,22 +218,25 @@ Para ello, clicamos en el nombre de la EFS recién creada **’almacenamiento-wo
 
 Pulsamos el botón **‘Editar reglas de entrada’**. A continuación, pulsamos **‘Agregar regla’**  y la nueva línea que aparece la rellenamos tal cual aparece en la imagen: 
 
-<img width="940" height="330" alt="image" src="https://github.com/user-attachments/assets/a56ee08e-6d92-4446-8273-3315163c1abe" /> 
+<img width="940" height="330" alt="image" src="https://github.com/user-attachments/assets/a56ee08e-6d92-4446-8273-3315163c1abe" />  
+
 Y pulsamos en **‘Guardar reglas’**. 
 
 
-<img width="940" height="381" alt="image" src="https://github.com/user-attachments/assets/ce513f6f-ccc8-491d-b339-a32866bca855" /> 
+<img width="940" height="381" alt="image" src="https://github.com/user-attachments/assets/ce513f6f-ccc8-491d-b339-a32866bca855" />  
+
 Ahora, vamos a intentar montar el disco en la instancia EC2. 
 
 Para ello, nos vamos de vuelta al cmd donde tenemos nuestra instancia EC2 abierta y ejecutamos **sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-TU_ID_AQUI.efs.us-east-1.amazonaws.com:/ /var/www/html** 
 
-<img width="941" height="150" alt="image" src="https://github.com/user-attachments/assets/cd10bb4a-a174-4a51-bddc-5687870fe82a" /> 
+<img width="941" height="150" alt="image" src="https://github.com/user-attachments/assets/cd10bb4a-a174-4a51-bddc-5687870fe82a" />  
+
 
 Me da error al montar. Vamos a intentarlo con la IP del EFS. 
 
 También da error. Volvemos atrás para revisar grupos de seguridad. 
 
-Hago un cambio en el comando colocando antes de la IP ,**addr=**10.0.138.91 
+Hago un cambio en el comando colocando antes de la IP ,**addr=** 10.0.138.91 
 
 
 <img width="940" height="330" alt="image" src="https://github.com/user-attachments/assets/df161eed-7719-4f8d-93ab-6a20481c4787" /> 
@@ -246,7 +254,8 @@ Vamos a descargar los archivos de instalación de wordpress en **/tmp**
 Nos situamos en el directorio **/tmp** 
 
 
-<img width="377" height="53" alt="image" src="https://github.com/user-attachments/assets/4c684bb9-22d6-43cb-ab3f-ce38846bf8a1" /> 
+<img width="377" height="53" alt="image" src="https://github.com/user-attachments/assets/4c684bb9-22d6-43cb-ab3f-ce38846bf8a1" />  
+
 y descargamas wordpress con **wget https://wordpress.org/latest.tar.gz** 
 
 descomprimimos el archivo con **tar -xzf latest.tar.gz** 
@@ -288,7 +297,8 @@ Ahora, ejecutamos los siguientes comandos:
 **FLUSH PRIVILEGES;** 
 
 
-<img width="940" height="381" alt="image" src="https://github.com/user-attachments/assets/2c62bb7d-ca56-4e4c-be5f-9344de3778f2" /> 
+<img width="940" height="381" alt="image" src="https://github.com/user-attachments/assets/2c62bb7d-ca56-4e4c-be5f-9344de3778f2" />  
+
 Finalmente, nos vamos a nuestro navegador y escribimos  http://IP_de_la_EC2. Ahora, si aparece la página de instalación de WordPress. 
 
 Le damos los datos que nos solicitan y seguimos el asistente hasta que se completa la instalación de wordpress. 
