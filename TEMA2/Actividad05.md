@@ -23,6 +23,7 @@ Los archivos de configuracón de Bind se guardan en **/etc/bind**
 El archivo de configuración principal es **named.conf**  
 
 <img width="1004" height="463" alt="image" src="https://github.com/user-attachments/assets/e32c6167-6674-4da2-b1df-c2de1dcea083" /> 
+
 Para un servidor DNS  con caché solo necesitamos modificar el archivo **named.conf.options** 
 
 **sudo nano named.conf.options** 
