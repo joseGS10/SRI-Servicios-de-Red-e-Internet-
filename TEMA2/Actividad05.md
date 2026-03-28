@@ -41,7 +41,7 @@ Una vez hemos declarado los clientes que podrán resolver sus solicitudes a trav
 
 Guardamos y salimos. Con esto hemos finalizado la configuración de Bind como servidor de caché. 
 
-Cada vez que modificamos un archivo de configuración debemos comprobar que la sintaxis escrita es correcta ejecutando el comando **"sudo named-checkconf"** 
+Cada vez que modificamos un archivo de configuración debemos comprobar que la sintaxis escrita es correcta ejecutando el comando **'sudo named-checkconf'** 
 
 Una vez vemos que no hay errores reiniciamos el demonio Bind con **sudo systemctl restart bind9** 
 
