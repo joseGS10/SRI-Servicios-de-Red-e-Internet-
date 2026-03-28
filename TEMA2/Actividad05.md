@@ -20,7 +20,7 @@ Los archivos de configuracón de Bind se guardan en **/etc/bind**
 
 **cd /etc/bind**  
 
-El archivo de configuración principal es **named.conf**  
+El archivo de configuración principal es **"named.conf"**  
 
 <img width="1004" height="463" alt="image" src="https://github.com/user-attachments/assets/e32c6167-6674-4da2-b1df-c2de1dcea083" /> 
 
@@ -41,7 +41,7 @@ Una vez hemos declarado los clientes que podrán resolver sus solicitudes a trav
 
 Guardamos y salimos. Con esto hemos finalizado la configuración de Bind como servidor de caché. 
 
-Cada vez que modificamos un archivo de configuración debemos comprobar que la sintaxis escrita es correcta ejecutando el comando **sudo named-checkconf** 
+Cada vez que modificamos un archivo de configuración debemos comprobar que la sintaxis escrita es correcta ejecutando el comando **"sudo named-checkconf"** 
 
 Una vez vemos que no hay errores reiniciamos el demonio Bind con **sudo systemctl restart bind9** 
 
@@ -71,7 +71,7 @@ Volvamos a reconfigurar el archivo **"named.conf.options"** añadiendo lo siguie
 
 <img width="1004" height="776" alt="image" src="https://github.com/user-attachments/assets/beeea6d2-c937-423a-8939-a10b01893d68" /> 
 
-Ejecutamos **sudo named-checkconf** para verificar sintaxis. 
+Ejecutamos **"sudo named-checkconf"** para verificar sintaxis. 
 
 Y reiniciamos **sudo systemctl restart bind9**
 
