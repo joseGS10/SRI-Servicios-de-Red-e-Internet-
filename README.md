@@ -17,5 +17,12 @@ Servicios de Red e Internet
 [Practica](/Practica/Servidor_web_instituto.md) | Práctica final Servidor Web Instituto |
 
 ## Practicando con AWS
-| [Instalacion_WordPress](/Practicando_con_AWS/Instalacion_WordPress.md) | Instalación de WordPress en EC2 con RDS y EFS
-|
+| [Instalacion_WordPress](/Practicando_con_AWS/Instalacion_WordPress.md) | Instalación de WordPress en EC2 con RDS y EFS |
+
+## TEMA 2 DNS
+
+| Ejercicio | Descripción |
+| --------- | ----------- |
+| [Actividad_05](/TEMA2/Actividad05.md) | Configuración Servidor DNS como caché / forwarding |
+| [Actividad_06](/TEMA2/Actividad06.md) | Configuración básica de Apache |
+| [Actividad_08](/TEMA2/Actividad08.md) | Trabajando con Script  |
