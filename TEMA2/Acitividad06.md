@@ -140,6 +140,7 @@ Comprobamos la zona inversa con
 •	Servidores web: www, departamentos 
 
 pasamos a ampliar dicho archivo de zona. 
+
 <img width="767" height="530" alt="image" src="https://github.com/user-attachments/assets/5796509d-31c5-4c3d-8a9c-d58097170b0f" /> 
 Si todas las verificaciones han salido Ok, reiniciamos el servicio Bind con **sudo service bind9 restart** 
 <img width="770" height="81" alt="image" src="https://github.com/user-attachments/assets/41617bfb-207c-41dd-aa34-b12f9525d229" /> 
@@ -150,6 +151,21 @@ Si todas las verificaciones han salido Ok, reiniciamos el servicio Bind con **su
 Hacemos algunas comprobaciones de que el servidor DNS primario responde: 
 <img width="700" height="503" alt="image" src="https://github.com/user-attachments/assets/b93f8656-ccee-4f36-a002-5197f1c6a601" /> 
 <img width="899" height="381" alt="image" src="https://github.com/user-attachments/assets/e84b13eb-ff9c-493c-a8e1-d7336d2384cc" /> 
+
+## Configuración del servidor secundario. 
+
+En el segundo servidor, solo tenemos que configurar el archivo **resolv.conf**, añadiendo la ip del servidor maestro  y diciéndole que busque la zona **marisma.intranet**. 
+
+<img width="1004" height="440" alt="image" src="https://github.com/user-attachments/assets/63513ad5-bb0c-488b-84ad-6a7a4cf273d9" /> 
+
+Hacemos comprobaciones. 
+<img width="655" height="130" alt="image" src="https://github.com/user-attachments/assets/09ff901e-f22c-4b42-9997-47b51e16d1bb" /> 
+<img width="658" height="461" alt="image" src="https://github.com/user-attachments/assets/1aeba842-7961-44b8-b831-2becd454aa12" /> 
+
+<img width="1003" height="413" alt="image" src="https://github.com/user-attachments/assets/d7490c3d-065a-4296-98e1-01b6f61caa38" /> 
+
+<img width="735" height="396" alt="image" src="https://github.com/user-attachments/assets/1b80a711-1b71-4b86-8c05-7136e3869e03" /> 
+
 
 
 
