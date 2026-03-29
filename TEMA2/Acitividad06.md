@@ -33,7 +33,20 @@ Servidor web			www.marisma.intranet	192.168.191.14
 
 <img width="800" height="93" alt="image" src="https://github.com/user-attachments/assets/9bab06d2-b5f5-46ba-8585-b1d0cbc00303" /> 
 
-Para que las máquinas cojan el nuevo nombre de host que le hemos dado sin tener que reiniciar ejecutamos **sudo hostname -F /etc/hostname** 
+Para que las máquinas cojan el nuevo nombre de host que le hemos dado sin tener que reiniciar ejecutamos **sudo hostname -F /etc/hostname**  
+
+## 3. Instalación de Bind en ambas MVs. (servidor DNS que utilizaremos) 
+
+
+Para ello, ejecutamos en cada una de ellos: 
+
+	**sudo apt update** 
+  
+ 	**sudo apt install bind9 bind9utils bind9-doc** 
+  
+
+## 4. Ejecutamos en ambas máquinas el comando systemctl status bind9 para comprobar que dichos servidores están activos que no configurados. Ambos están OK. 
+
 
 
 
