@@ -16,7 +16,7 @@ Servidor web			www.marisma.intranet	192.168.191.14
 
 ## 1. Configuración de los nombres de hosts en ambas máquinas. 
 **MV1**
- 
+
  
 **MV2** 
 
@@ -24,6 +24,7 @@ Servidor web			www.marisma.intranet	192.168.191.14
 
 ## 2. Modificar el archivo /etc/hostname para que contenga un nombre de host acorde a su finalidad en ambas máquinas.
 **MV1** 
+
 <img width="799" height="113" alt="image" src="https://github.com/user-attachments/assets/5aaeb0e0-22a5-48ad-979d-0962dd95dfcf" /> 
 
 **MV2** 
