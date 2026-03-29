@@ -16,8 +16,9 @@ Servidor web			www.marisma.intranet	192.168.191.14
 
 ## 1. Configuración de los nombres de hosts en ambas máquinas. 
 **MV1**
+<img width="790" height="232" alt="image" src="https://github.com/user-attachments/assets/dd47b463-d22a-4ec6-bd5c-014ee1a3343c" /> 
 
- 
+
 **MV2** 
 
 <img width="797" height="227" alt="image" src="https://github.com/user-attachments/assets/02c5e594-2ce5-4840-896b-39fc0562045a" /> 
