@@ -104,21 +104,28 @@ Explicación de lo que hay dentro:
 5.	Por último, como tenemos un servidor web en uno de nuestros hosts que queremos usar para servir nuestro sitio dirigiremos las solicitudes de dicho sitio a este host; así como las solicitudes con www
 Comprobar sintaxis named-checkconf
 
-→ Pasamos a crear los archivos que definirán estas zonas
+→ Creación del archivo de zona inversa. 
+<img width="787" height="364" alt="image" src="https://github.com/user-attachments/assets/53eee093-380a-4026-bafa-ac08b0326861" /> 
 
-El propósito principal de un archivo de zona es asignar nombres de host y servicios a direcciones específicas.
+<img width="789" height="413" alt="image" src="https://github.com/user-attachments/assets/5af19e19-6dae-44df-95f9-78012ac14748" /> 
+En estos momentos, la configuración del servidor principal está completa. 
 
-→ Creación del archivo de zona directa.
+Comprobamos sintaxis con **sudo named-checkconf** 
 
-	sudo nano /etc/bind/zones/db.marisma.intranet
+Comprobamos el archivo de zona directa con 
 
-Explicación de lo que hay dentro:
-1.	El registro SOA (Start of Authority): Indica quién es el servidor principal y quién es el responsable.
-2.	El Serial: Es un número que debemos cambiar cada vez que editemos el archivo. El servidor secundario (mV2) mirará este número; si el número de mV1 es mayor que el suyo, sabrá que tiene que actualizarse.
-3.	Registros NS: Indican qué servidores son los "Name Servers" (servidores de nombres) de este dominio.
-4.	Registros A: Traducen un nombre a una dirección IP (IPv4).
-5.	Por último, como tenemos un servidor web en uno de nuestros hosts que queremos usar para servir nuestro sitio dirigiremos las solicitudes de dicho sitio a este host; así como las solicitudes con www
-→ Creación del archivo de zona inversa.
+**sudo named-checkzone marisma.intranet /etc/bind/zones/db.marisma.intranet** 
+
+<img width="780" height="90" alt="image" src="https://github.com/user-attachments/assets/ae741df1-3387-44a9-a1ac-5eae3bb0ae03" /> 
+
+
+Comprobamos la zona inversa con 
+
+**sudo named-checkzone 191.168.192.in-addr.arpa /etc/bind/zones/db.192.168.191** 
+
+<img width="760" height="80" alt="image" src="https://github.com/user-attachments/assets/7fc9e85e-11d5-4b58-a66e-589362d6612a" /> 
+
+
 
 
 
