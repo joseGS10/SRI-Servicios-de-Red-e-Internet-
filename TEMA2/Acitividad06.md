@@ -127,6 +127,7 @@ Comprobamos la zona inversa con
 
 <img width="760" height="80" alt="image" src="https://github.com/user-attachments/assets/7fc9e85e-11d5-4b58-a66e-589362d6612a" /> 
 
+
 → Como el ejercicio pide que configuremos en el archivo de zona los siguientes FQND: 
 
 
@@ -139,6 +140,18 @@ Comprobamos la zona inversa con
 •	Servidores web: www, departamentos 
 
 pasamos a ampliar dicho archivo de zona. 
+<img width="767" height="530" alt="image" src="https://github.com/user-attachments/assets/5796509d-31c5-4c3d-8a9c-d58097170b0f" /> 
+Si todas las verificaciones han salido Ok, reiniciamos el servicio Bind con **sudo service bind9 restart** 
+<img width="770" height="81" alt="image" src="https://github.com/user-attachments/assets/41617bfb-207c-41dd-aa34-b12f9525d229" /> 
+
+→ Se debe prestar especial atención comprobando los registros con **sudo tail -f /var/log/syslog** para asegurarnos de que no haya errores. 
+<img width="999" height="91" alt="image" src="https://github.com/user-attachments/assets/6ecf60ba-e72c-4efe-a297-78f1a7556ddf" /> 
+
+Hacemos algunas comprobaciones de que el servidor DNS primario responde: 
+<img width="700" height="503" alt="image" src="https://github.com/user-attachments/assets/b93f8656-ccee-4f36-a002-5197f1c6a601" /> 
+<img width="899" height="381" alt="image" src="https://github.com/user-attachments/assets/e84b13eb-ff9c-493c-a8e1-d7336d2384cc" /> 
+
+
 
 
 
