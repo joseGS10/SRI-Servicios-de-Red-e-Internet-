@@ -75,8 +75,8 @@ Para configurar esta zona, necesitamos abrir **/etc/bind/named.conf.local**
 
 	+ definimos nuestro servidor dns como maestro
 	+ Apuntamos a Bind al archivo que contiene los registros de recursos que definen la zona
-	+ Mantendremos nuestros archivos de zona principal en un subdirectorio ‘zones’ dentro del 	directorio de configuración de Bind. Llamaremos a nuestro archivo 				db.marisma.intranet
-		**sudo mkdir /etc/bind/zones**
+	+ Mantendremos nuestros archivos de zona principal en un subdirectorio ‘zones’ dentro del directorio de configuración de Bind. Llamaremos a nuestro archivo 				db.marisma.intranet
+		sudo mkdir /etc/bind/zones
 	+ Definimos la zona directa y la zona inversa para nuestro dominio.
 
 
