@@ -158,7 +158,8 @@ En el segundo servidor, solo tenemos que configurar el archivo **resolv.conf**, 
 
 <img width="1004" height="440" alt="image" src="https://github.com/user-attachments/assets/63513ad5-bb0c-488b-84ad-6a7a4cf273d9" /> 
 
-Hacemos comprobaciones. 
+Hacemos comprobaciones.  
+
 <img width="655" height="130" alt="image" src="https://github.com/user-attachments/assets/09ff901e-f22c-4b42-9997-47b51e16d1bb" /> 
 <img width="658" height="461" alt="image" src="https://github.com/user-attachments/assets/1aeba842-7961-44b8-b831-2becd454aa12" /> 
 
