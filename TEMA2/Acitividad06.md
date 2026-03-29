@@ -105,9 +105,11 @@ Explicación de lo que hay dentro:
 Comprobar sintaxis named-checkconf
 
 → Creación del archivo de zona inversa. 
+
 <img width="787" height="364" alt="image" src="https://github.com/user-attachments/assets/53eee093-380a-4026-bafa-ac08b0326861" /> 
 
 <img width="789" height="413" alt="image" src="https://github.com/user-attachments/assets/5af19e19-6dae-44df-95f9-78012ac14748" /> 
+
 En estos momentos, la configuración del servidor principal está completa. 
 
 Comprobamos sintaxis con **sudo named-checkconf** 
@@ -124,6 +126,19 @@ Comprobamos la zona inversa con
 **sudo named-checkzone 191.168.192.in-addr.arpa /etc/bind/zones/db.192.168.191** 
 
 <img width="760" height="80" alt="image" src="https://github.com/user-attachments/assets/7fc9e85e-11d5-4b58-a66e-589362d6612a" /> 
+
+→ Como el ejercicio pide que configuremos en el archivo de zona los siguientes FQND: 
+
+
+•	Servidor DNS: ns1 
+
+•	Servidor ftp: ftp1 
+
+•	Servidores de correo: mail1, mail2 
+
+•	Servidores web: www, departamentos 
+
+pasamos a ampliar dicho archivo de zona. 
 
 
 
