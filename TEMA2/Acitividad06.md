@@ -52,8 +52,10 @@ Para ello, ejecutamos en cada una de ellos:
 
 Primero configuraremos el archivo **named.conf.options** con **sudo /etc/bind/named.conf.options** 
 
-En este caso, vamos a configurar el servidor como autoritativo, es decir, solo sabe y va a contestar cuando se le pregunte por “marisma.intranet”, solo va a saber de su zona. Con ello, ganamos en seguridad y rendimiento, ya que el servidor solo trabajará para encontrar sus máquinas internas especificadas. 
-<img width="886" height="294" alt="image" src="https://github.com/user-attachments/assets/2584ab07-1b26-487b-beb1-50f9cb51eb6f" /> 
+En este caso, vamos a configurar el servidor como autoritativo, es decir, solo sabe y va a contestar cuando se le pregunte por “marisma.intranet”, solo va a saber de su zona. Con ello, ganamos en seguridad y rendimiento, ya que el servidor solo trabajará para encontrar sus máquinas internas especificadas.  
+
+<img width="886" height="294" alt="image" src="https://github.com/user-attachments/assets/2584ab07-1b26-487b-beb1-50f9cb51eb6f" />  
+
 → Desactivamos la recursión para que solo sea autoritativo, es decir, si la respuesta no está en sus archivos locales, le dice al cliente que no lo sabe. 
 
 
@@ -62,6 +64,20 @@ En este caso, vamos a configurar el servidor como autoritativo, es decir, solo s
 
 Verificamos que no haya errores de sintaxis con  **named-checkconf** 
 
+## 6. Configurar el archivo local (donde definimos nuestras propias zonas) 
+
+Aquí definiremos las zonas que queremos controlar con este servidor primario. En bind9 a cada dominio que gestiona se le llama zona. Y para que el servidor sepa que él es el responsable de **“marisma.intranet”**, tenemos que declararlo en un archivo específico. 
+
+
+Para configurar esta zona, necesitamos abrir **/etc/bind/named.conf.local** 
+
+→ Creamos un bloque de configuración que define la zona de dominio que queremos configurar: 
+
+	+ definimos nuestro servidor dns como maestro
+	+ Apuntamos a Bind al archivo que contiene los registros de recursos que definen la zona
+	+ Mantendremos nuestros archivos de zona principal en un subdirectorio ‘zones’ dentro del 	directorio de configuración de Bind. Llamaremos a nuestro archivo 				db.marisma.intranet
+		**sudo mkdir /etc/bind/zones**
+	+ Definimos la zona directa y la zona inversa para nuestro dominio.
 
 
 
