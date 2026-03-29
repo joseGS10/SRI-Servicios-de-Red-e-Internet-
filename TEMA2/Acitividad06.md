@@ -15,6 +15,8 @@ Servidor DNS secundario	ns2.marisma.intranet		192.168.191.28
 Servidor web			www.marisma.intranet	192.168.191.14 
 
 ## 1. Configuración de los nombres de hosts en ambas máquinas. 
+*MV1** 
+
 
 <img width="790" height="232" alt="image" src="https://github.com/user-attachments/assets/dd47b463-d22a-4ec6-bd5c-014ee1a3343c" /> 
 
