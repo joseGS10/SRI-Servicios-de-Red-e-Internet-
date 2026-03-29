@@ -79,6 +79,48 @@ Para configurar esta zona, necesitamos abrir **/etc/bind/named.conf.local**
 		sudo mkdir /etc/bind/zones
 	+ Definimos la zona directa y la zona inversa para nuestro dominio.
 
+<img width="804" height="288" alt="image" src="https://github.com/user-attachments/assets/9ba9b912-a990-4d36-b289-068ad1d3d043" /> 
+
+Comprobar sintaxis **named-checkconf** 
+
+
+→ Pasamos a crear los archivos que definirán estas zonas 
+
+
+El propósito principal de un archivo de zona es asignar nombres de host y servicios a direcciones específicas. 
+
+
+→ Creación del archivo de zona directa. 
+
+
+	sudo nano /etc/bind/zones/db.marisma.intranet
+
+Explicación de lo que hay dentro: 
+
+1.	El registro SOA (Start of Authority): Indica quién es el servidor principal y quién es el responsable.
+2.	El Serial: Es un número que debemos cambiar cada vez que editemos el archivo. El servidor secundario (mV2) mirará este número; si el número de mV1 es mayor que el suyo, sabrá que tiene que actualizarse.
+3.	Registros NS: Indican qué servidores son los "Name Servers" (servidores de nombres) de este dominio.
+4.	Registros A: Traducen un nombre a una dirección IP (IPv4).
+5.	Por último, como tenemos un servidor web en uno de nuestros hosts que queremos usar para servir nuestro sitio dirigiremos las solicitudes de dicho sitio a este host; así como las solicitudes con www
+Comprobar sintaxis named-checkconf
+
+→ Pasamos a crear los archivos que definirán estas zonas
+
+El propósito principal de un archivo de zona es asignar nombres de host y servicios a direcciones específicas.
+
+→ Creación del archivo de zona directa.
+
+	sudo nano /etc/bind/zones/db.marisma.intranet
+
+Explicación de lo que hay dentro:
+1.	El registro SOA (Start of Authority): Indica quién es el servidor principal y quién es el responsable.
+2.	El Serial: Es un número que debemos cambiar cada vez que editemos el archivo. El servidor secundario (mV2) mirará este número; si el número de mV1 es mayor que el suyo, sabrá que tiene que actualizarse.
+3.	Registros NS: Indican qué servidores son los "Name Servers" (servidores de nombres) de este dominio.
+4.	Registros A: Traducen un nombre a una dirección IP (IPv4).
+5.	Por último, como tenemos un servidor web en uno de nuestros hosts que queremos usar para servir nuestro sitio dirigiremos las solicitudes de dicho sitio a este host; así como las solicitudes con www
+→ Creación del archivo de zona inversa.
+
+
 
 
 
