@@ -35,4 +35,24 @@ Esto actualiza la lista de paquetes e instalará el servidor  BIND9 y las utilid
 
 
 Verificamos que el servicio bin9 está corriendo:
+<img width="1004" height="286" alt="image" src="https://github.com/user-attachments/assets/faf9dae2-925c-402e-8c7f-3c5a292a16b1" /> 
+
+## Paso 2. Declaración de la zona principal “iesmarisma.intranet”
+
+Editamos el archivo donde Bind guarda sus configuraciones locales 
+
+
+	sudo nano /etc/bind/named.conf.local 
+   <img width="739" height="127" alt="image" src="https://github.com/user-attachments/assets/d213247f-a5cc-4e31-bbd3-bae3a48377c3" /> 
+## Paso 3. Creación del archivo de zona /etc/bind/db.iesmarisma.intranet
+Para ello, vamos a utilizar como plantilla el archivo original **db.local** 
+
+
+**sudo cp /etc/bind/db.local	/etc/bind/db.iesmarisma.intranet** 
+
+**sudo nano /etc/bind/db.iesmarisma.intranet** 
+
+
+
+
 
