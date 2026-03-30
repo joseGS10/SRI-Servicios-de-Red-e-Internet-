@@ -24,5 +24,5 @@ Servicios de Red e Internet
 | Ejercicio | Descripción |
 | --------- | ----------- |
 | [Actividad_05](/TEMA2/Actividad05.md) | Configuración Servidor DNS como caché - forwarding |
-| [Actividad_06](/TEMA2/Actividad06.md) | Configuración de un Servidor DNS maestro |
+| [Actividad_06](/TEMA2/Actividad06.md.) | Configuración de un Servidor DNS maestro |
 | [Actividad_08](/TEMA2/Actividad08.md) | Configuración de un Suddominio(virtual) |
