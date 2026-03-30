@@ -54,6 +54,20 @@ Para ello, vamos a utilizar como plantilla el archivo original **db.local**
 
 **sudo nano /etc/bind/db.iesmarisma.intranet** 
 
+<img width="753" height="448" alt="image" src="https://github.com/user-attachments/assets/9fe258dd-5c14-4bdc-8c72-ea00df5b740e" /> 
+
+Como el subdominio a configurar será uno virtual, hemos indicado todos los equipos de este subdominio virtual apuntando a la misma IP. 
+
+
+Verificamos que no haya errores de sintaxis: 
+
+•	Para la configuración general ejecutamos **sudo named-checkconf** 
+
+•	Para el archivo de zona ejecutamos 
+
+
+**sudo named-checkzone iesmarisma.intranet /etc/bind/db.iesmarisma.intranet** 
+
 
 
 
