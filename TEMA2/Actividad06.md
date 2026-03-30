@@ -1,5 +1,3 @@
-# Hola
-
 # Actividad 6. Configuración de un Servidor DNS maestro
 
 Necesitamos 2 MV donde llevaremos a cabo nuestra configuración. 
