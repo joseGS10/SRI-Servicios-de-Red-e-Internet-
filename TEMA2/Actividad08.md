@@ -44,7 +44,9 @@ Editamos el archivo donde Bind guarda sus configuraciones locales
 
 	sudo nano /etc/bind/named.conf.local 
    <img width="739" height="127" alt="image" src="https://github.com/user-attachments/assets/d213247f-a5cc-4e31-bbd3-bae3a48377c3" /> 
+   
 ## Paso 3. Creación del archivo de zona /etc/bind/db.iesmarisma.intranet
+
 Para ello, vamos a utilizar como plantilla el archivo original **db.local** 
 
 
