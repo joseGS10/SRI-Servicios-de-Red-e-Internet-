@@ -215,17 +215,17 @@ Creación de Carpetas (Directorios Web)
 Ahora mismo esas carpetas pertenecen al administrador (root). Ahora, vamos a asignarlas al usuario www-data de Apache para garantizar el correcto acceso del servidor web. Posteriormente, se modificará la propiedad para que cada cliente sea dueño de su propio espacio web, manteniendo al servidor Apache con permisos de lectura.Tenemos que hacer que estas carpetas sean propiedad absoluta de cada cliente en cuestión para que puedan subir cosas y para ello ejecutamos 
 
 
-**	sudo chown -R www-data:www-data /var/www/html/cliente1 ** 
+**sudo chown -R www-data:www-data /var/www/html/cliente1** 
 
-**	sudo chown -R www-data:www-data /var/www/html/cliente2 ** 
+**sudo chown -R www-data:www-data /var/www/html/cliente2** 
 
 
 Además, daremos permisos totales sobre dichas carpetas a sus propietarios actuales, y de solo lectura y ejecución para el grupo y resto. 
 
 
-**	sudo chmod -R 755 /var/www/html/cliente1 ** 
+**sudo chmod -R 755 /var/www/html/cliente1** 
 
-**	sudo chmod -R 755 /var/www/html/cliente2 ** 
+**sudo chmod -R 755 /var/www/html/cliente2** 
 
 Con esto, conseguimos que Apache pueda servir las páginas. 
 
