@@ -65,6 +65,11 @@ Como se trata de una red interna vamos a presuponer que los únicos clientes que
 
 La puerta de enlace o **gateway es 192.168.191.101** 
 
+<img width="512" height="43" alt="image" src="https://github.com/user-attachments/assets/3531f21b-912b-4694-ad97-3052fa74b872" /> 
+Configuración de red estática. 
+<img width="941" height="421" alt="image" src="https://github.com/user-attachments/assets/1a0f5000-4d5e-4795-af0c-ac3d005ad5c0" /> 
+
+
 
 
 
