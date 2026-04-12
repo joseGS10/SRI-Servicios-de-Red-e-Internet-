@@ -125,6 +125,64 @@ Reiniciamos el servidor para que coja todos los cambios que ha sufrido con	**sud
 
 
 Ahora, abrimos el navegador y comprobamos si Apache es capaz de mostrarnos el contenido de ese archivo **.php** que acabamos de crear. 
+<img width="940" height="340" alt="image" src="https://github.com/user-attachments/assets/647d3daa-8dba-4e8f-9d37-277393a1f05e" /> 
+Y efectivamente, estamos viendo la ejecución del archivo info.php. Esta ejecución nos muestra un montón de información como la versión de PHP, módulos instalados y demás información que podría usar un atacante para encontrar vulnerabilidades por lo que una vez comprobado su funcionamiento se aconseja su borrado con **sudo rm /var/www/html/info.php** 
+
+
+Continuamos con la **instalación** del intérprete del lenguaje **Python** y el módulo WSGI que es el estándar que permite a Apache comunicarse y ejecutar aplicaciones escritas en Python de forma eficiente. 
+
+
+**sudo apt install python3 libapache2-mod-wsgi-py3** 
+
+
+Para concluir con este bloque de instalaciones, vamos a **instalar un servidor de Bases de Datos y phpMyAdmin.** 
+
+Toda página web dinámica de cierta complejidad (foro, tienda online o un WordPress) necesita de un lugar donde guardar la información(artículos, contraseñas, configuraciones..) y ese es el Servidor de Base de Datos.
+
+
+Instalamos el servidor y cliente de la base de datos ejecutando 
+
+++sudo apt install mariadb-server mariadb-client -y** 
+
+
+Ahora, comprobamos que el motor de base de datos está arrancado  
+
+
+**systemclt status mariadb** 
+<img width="940" height="315" alt="image" src="https://github.com/user-attachments/assets/9e1b34a0-08cc-4fd6-a46a-64d3509639df" /> 
+Cuando instalamos el servidor de base de datos, este crea un usuario sin contraseña (root) el cual utiliza el administrador para entrar por primera vez y configurar las cosas, además de otros usuarios anónimos sin nombre ni contraseña y que pueden ser usados por cualquiera para entrar como anónimo al sistema. Y esto supone un peligro si el servidor se expone a internet. Por lo que se aconseja , una vez instalado el servidor de Base de Datos, ejecutar el siguiente script de seguridad 
+
+**sudo mysql_secure_installation** 
+
+y debemos contestar a las preguntas con lo siguiente: 
+
+1.	Intro
+  
+2.	n + Intro
+   
+3.	y + Intro + contraseña segura para root + Intro
+   
+4.	y + Intro
+   
+5.	y + Intro
+   
+6.	y+ Intro
+   
+7.	y + Intro
+   
+
+Finalizamos **instalando phpMyAdmin** para que yo y los usuarios del servicio de alojamiento podamos gestionar las bases de datos con un entorno gráfico muy amigable desde el navegador. Esta aplicación web, actúa como un cliente gráfico (frontend) que interactúa directamente con el motor MariaDB, permitiendo crear, modificar y eliminar bases de datos de forma intuitiva desde cualquier navegador web. 
+
+
+**sudo apt install phpmyadmin -y** 
+
+
+Comprobamos que funciona escribiendo en el navegador **http://192.168.191.35/phpmyadmin** 
+
+
+
+
+
 
 
 
