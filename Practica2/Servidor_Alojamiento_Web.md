@@ -54,3 +54,17 @@ Automatización → Scripts Bash
 
 (Opcional) → Docker 
 
+## Paso 1. **Configuración de red.** 
+
+
+La MV donde vamos a llevar a cabo la práctica es **SRI-2-JB** en el nodo **marisma 000**. Dicha máquina dispone de la **interfaz virtual vmbr 9998** con salida a internet. 
+
+La IP que recibe esta máquina por DHCP es **192.168.191.35/24** y debemos configurarla como estática por el simple hecho de que un servidor necesita una IP fija tanto para el DNS, como para Apache (virtual hosts), como para los clientes. 
+
+Como se trata de una red interna vamos a presuponer que los únicos clientes que podrán hacer uso del servidor serán usuarios de la misma red interna. 
+
+La puerta de enlace o **gateway es 192.168.191.101** 
+
+
+
+
