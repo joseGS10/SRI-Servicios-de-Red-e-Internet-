@@ -92,6 +92,43 @@ A continuación, vamos a instalar **Apache HTTP Server** que es un servicio que 
 
 Para verificar la correcta instalación y la activación del servicio ejecutamos **systemctl status apache2** 
 
+<img width="940" height="342" alt="image" src="https://github.com/user-attachments/assets/c7f36bf0-52e5-4d34-984b-f88cdf01ba21" /> 
+
+Comprobamos su funcionamiento abriendo el navegador y colocando la IP de nuestro servidor y debemos ver la página por defecto de Apache. 
+
+<img width="940" height="350" alt="image" src="https://github.com/user-attachments/assets/d65e5a80-9daf-4170-b8e3-a1ca9d88f353" /> 
+
+Hemos instalado el **servidor web Apache**, que permitirá ofrecer contenido web a través del protocolo HTTP. Hemos verificado que el **servicio está activo** y funciona correctamente accediendo a su página web por defecto desde el navegador. 
+
+
+Seguimos con la "instalación de PHP". 
+
+Para ello, ejecutamos **sudo apt install php libapache2-mod-php php-mysql -y** 
+
+
+**php** instala el núcleo del lenguaje PHP 
+
+**libapache2-mod-php** es el módulo que conecta Apache con PHP, permitiendo que el servidor intérprete código dinámico en lugar de mostrarlo como texto plano 
+
+**php-mysql** módulo que permite la conexión PHP - MySQL 
+
+
+La instalación de PHP nos va a permitir el manejo de páginas dinámicas, conexión con MySQL, aplicaciones web(phpMyAdmin). 
+
+
+
+Vamos a ver si Apache y PHP se comunican correctamente. Para ello,vamos a crear un archivo con código PHP. El directorio principal donde Apache busca las páginas Web por defecto es /var/www/html/ 
+
+Vamos a crear allí un archivo llamado **info.php** 
+<img width="941" height="119" alt="image" src="https://github.com/user-attachments/assets/7ecdc368-f573-4664-8b51-1ddfec999361" /> 
+Reiniciamos el servidor para que coja todos los cambios que ha sufrido con	**sudo systemctl restart apache2** 
+
+
+Ahora, abrimos el navegador y comprobamos si Apache es capaz de mostrarnos el contenido de ese archivo **.php** que acabamos de crear. 
+
+
+
+
 
 
 
