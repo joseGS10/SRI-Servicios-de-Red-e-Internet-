@@ -26,3 +26,7 @@ Servicios de Red e Internet
 | [Actividad_05](/TEMA2/Actividad05.md) | Configuración Servidor DNS como caché - forwarding |
 | [Actividad_06](/TEMA2/Actividad06.md) | Configuración de un Servidor DNS maestro |
 | [Actividad_08](/TEMA2/Actividad08.md) | Configuración de un Suddominio(virtual) |
+
+## Practica 2ºParcial. Servidor alojamiento Web. 
+[Practica2ºParcial](/Practica2/Servidor_Alojamiento_web.md) | Práctica servidor de alojamiento web |
+
