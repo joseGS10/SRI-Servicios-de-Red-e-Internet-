@@ -28,5 +28,5 @@ Servicios de Red e Internet
 | [Actividad_08](/TEMA2/Actividad08.md) | Configuración de un Suddominio(virtual) |
 
 ## Practica 2ºParcial. Servidor alojamiento Web. 
-[Práctica2](/Práctica2/Servidor_Alojamiento_web.md) | Práctica servidor de alojamiento web |
+[Práctica2](/Práctica2/Servidor_Alojamiento_Web.md) | Práctica servidor de alojamiento web |
 
