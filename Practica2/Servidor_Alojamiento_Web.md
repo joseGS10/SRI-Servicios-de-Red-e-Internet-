@@ -71,6 +71,31 @@ Configuración de red estática.
 
 <img width="941" height="421" alt="image" src="https://github.com/user-attachments/assets/1a0f5000-4d5e-4795-af0c-ac3d005ad5c0" />  
 
+Guardamos y salimos. 
+
+Aplicamos dicha configuración. 
+<img width="940" height="277" alt="image" src="https://github.com/user-attachments/assets/0f5d11c3-9e1e-4116-b176-d9384fa12c71" /> 
+No hay por qué preocuparse por los warning. 
+Hacemos las siguientes comprobaciones. 
+
+<img width="940" height="410" alt="image" src="https://github.com/user-attachments/assets/21271971-1632-4271-a963-36951d5a62c4" /> 
+<img width="940" height="260" alt="image" src="https://github.com/user-attachments/assets/84f4d317-ae52-4213-92fd-250679db710c" /> 
+<img width="940" height="260" alt="image" src="https://github.com/user-attachments/assets/58daf7d4-bb18-46fe-8373-8c9a45777db1" /> 
+
+## Paso 2. Instalación del Servidor Web (Apache + MySQL + PHP + Python)
+
+Actualizamos los repositorios con **sudo apt update** y **sudo apt upgrade**. 
+
+A continuación, vamos a instalar **Apache HTTP Server** que es un servicio que escucha las peticiones por el puerto 80(HTTP), sirve páginas web a sus clientes y gestiona hosts virtuales. 
+
+**sudo apt install apache2 -y** 
+
+Para verificar la correcta instalación y la activación del servicio ejecutamos **systemctl status apache2** 
+
+
+
+
+
 
 
 
