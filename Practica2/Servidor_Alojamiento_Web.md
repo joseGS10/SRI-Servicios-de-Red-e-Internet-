@@ -660,7 +660,7 @@ Guardamos (Ctrl+o, Enter) y salimos (Ctrl+x)
 Creamos una aplicación en Python dentro de la carpeta del **cliente3** para demostrar que funciona. 
 
 
-**sudo nano /var/www/html/cliente3/app.py ** 
+**sudo nano /var/www/html/cliente3/app.py** 
 
 <img width="940" height="235" alt="image" src="https://github.com/user-attachments/assets/66c02dd0-0d95-4a82-8890-6b7b74d5329f" /> 
 
