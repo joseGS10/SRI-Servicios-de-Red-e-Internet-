@@ -142,7 +142,7 @@ Toda página web dinámica de cierta complejidad (foro, tienda online o un WordP
 
 Instalamos el servidor y cliente de la base de datos ejecutando 
 
-++sudo apt install mariadb-server mariadb-client -y** 
+**sudo apt install mariadb-server mariadb-client -y** 
 
 
 Ahora, comprobamos que el motor de base de datos está arrancado  
