@@ -34,4 +34,4 @@ Servicios de Red e Internet
 
 | Ejercicio | Descripción |
 | --------- | ----------- |
-| [Actividades_docker](/TEMA3/Actividades_docker.md) | Primeros pasos con Docker |
+| [Actividades_docker](/TEMA3/Ejercicios_docker.md) | Primeros pasos con Docker |
