@@ -54,5 +54,10 @@ En nuestro caso usaremos los repositorios apt de Docker, para ello:
 
 **sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin** 
 **docker-compose-plugin**  
+5. Verificamos que Docker está funcionando: 
+
+
+**sudo systemctl status docker** 
+
 
 
