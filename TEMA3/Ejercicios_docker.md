@@ -241,6 +241,78 @@ Pasos:
 
 3. **Desplegamos el microservicio Frontend (La web)**: Esta es la interfaz gráfica. Publicamos el puerto 3000 interno del contenedor hacia el puerto 80 de nuestro ordenador.  
 
+<img width="576" height="82" alt="Screenshot_1" src="https://github.com/user-attachments/assets/d153f89b-e75c-41a4-9c25-2d8c53caea21" /> 
+
+4. Vamos al navegador y abrimos la aplicación.
+
+<img width="577" height="242" alt="Screenshot_1" src="https://github.com/user-attachments/assets/7b539f17-48a2-464b-b17f-11e040eba857" /> 
+
+
+Ahora vamos a replicar la situación del cambio de nombre para entender cómo conectar servicios cuando no usan los nombres por defecto.  
+
+
+1. Borramos los contenedores actuales para liberar el puerto 80 de tu máquina física.
+
+<img width="577" height="77" alt="Screenshot_1" src="https://github.com/user-attachments/assets/f3989527-59bd-42d1-bbc6-c87f93558513" /> 
+
+2. **Desplegamos el Backend con un nombre personalizado**: Esta vez lo bautizamos como temperaturas-api.
+
+<img width="577" height="77" alt="Screenshot_1" src="https://github.com/user-attachments/assets/83bed714-030e-409b-a24d-041f0347b07b" /> 
+
+3. **Desplegamos el Frontend sobreescribiendo la configuración:** Usamos -e TEMP_SERVER=temperaturas-api:5000 para indicarle a la web exactamente dónde y en qué puerto debe buscar los datos ahora.
+
+<img width="575" height="75" alt="Screenshot_1" src="https://github.com/user-attachments/assets/5a609c40-968f-4538-a9ef-398d01187a45" /> 
+
+4. Accedemos al navegador y verificamos.
+
+<img width="577" height="243" alt="Screenshot_1" src="https://github.com/user-attachments/assets/db76647c-dd7b-42e7-b6c8-13d51b7efb7d" /> 
+
+**Ejemplo 3. Despliegue de Wordpress + Mariadb** 
+
+
+1. Creamos la red de WordPress
+
+<img width="576" height="77" alt="Screenshot_1" src="https://github.com/user-attachments/assets/64ccc37f-0dc1-4359-a37f-e7b24b848dd7" /> 
+
+2. Desplegamos el motor de Base de Datos (mariaDB).Podemos observar en la cantidad de variables de entorno (-e) que usamos aquí. Le estamos diciendo a MariaDB cómo se llama la base de datos, el usuario y las contraseñas antes de que arranque, para que lo configure todo automáticamente. Además, guardamos los datos en tu disco duro en /opt/mysql_wp.
+
+<img width="576" height="235" alt="Screenshot_1" src="https://github.com/user-attachments/assets/63c214a4-979d-40fe-ab89-b29eeab721aa" /> 
+
+3. Desplegamos el Servidor Web (WordPress).Ahora levantamos WordPress. Lo conectamos a la misma red y usamos las variables WORDPRESS_DB_... para pasarle exactamente los mismos datos de conexión que configuramos en el paso anterior. Gracias a esto, WordPress no nos pedirá configurar la base de datos a mano.
+
+<img width="576" height="315" alt="Screenshot_1" src="https://github.com/user-attachments/assets/6b33f236-52ff-4dc5-8ab3-17c5136e20b1" /> 
+
+4. Comprobamos que ambos contenedores están corriendo.
+
+<img width="575" height="97" alt="Screenshot_1" src="https://github.com/user-attachments/assets/eb4e2799-8ab6-4848-b34c-65695a254457" /> 
+
+5. Comprobamos que podemos acceder a Wordpress desde el navegador.
+
+<img width="577" height="330" alt="Screenshot_1" src="https://github.com/user-attachments/assets/14785280-4144-414c-9cd5-cac4897d3f87" /> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
