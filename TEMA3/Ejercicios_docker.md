@@ -59,6 +59,8 @@ En nuestro caso usaremos los repositorios apt de Docker, para ello:
 5. Verificamos que Docker está funcionando:  
 
 **sudo systemctl status docker** 
+<img width="376" height="114" alt="Screenshot_1" src="https://github.com/user-attachments/assets/f5b43d9b-f5b5-43e2-9c94-10968a4d50d4" /> 
+
 
 
 
