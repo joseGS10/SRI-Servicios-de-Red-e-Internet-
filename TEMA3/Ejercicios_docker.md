@@ -94,9 +94,12 @@ Si Docker no está ejecutándose, lo podemos iniciar manualmente con **sudo syst
 <img width="576" height="337" alt="Screenshot_1" src="https://github.com/user-attachments/assets/119c99d1-61ca-4a6b-9738-9303e6088a93" /> 
 
 5 En esta ocasión, creamos un contenedor con la imagen de ‘alpine’, y dicho contenedor de linux  ejecuta el comando echo y se cierra. 
-	**docker run alpine echo “hello from alpine”** 
+
+**docker run alpine echo “hello from alpine”** 
  
- <img width="576" height="133" alt="Screenshot_1" src="https://github.com/user-attachments/assets/8c0ecbef-9ef9-41b5-9066-49668e2f64d1" /> 
+ <img width="576" height="83" alt="Screenshot_1" src="https://github.com/user-attachments/assets/8c0ecbef-9ef9-41b5-9066-49668e2f64d1" /> 
+
+ 
  
 
 
