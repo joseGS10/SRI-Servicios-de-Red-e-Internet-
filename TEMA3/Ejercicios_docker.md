@@ -97,13 +97,13 @@ Si Docker no está ejecutándose, lo podemos iniciar manualmente con **sudo syst
 
 **docker run alpine echo “hello from alpine”** 
  
- <img width="576" height="83" alt="Screenshot_1" src="https://github.com/user-attachments/assets/8c0ecbef-9ef9-41b5-9066-49668e2f64d1" /> 
+ <img width="576" height="63" alt="Screenshot_1" src="https://github.com/user-attachments/assets/8c0ecbef-9ef9-41b5-9066-49668e2f64d1" /> 
 
 6. Volvamos a ejecutar una nueva instancia del contenedor Alpine, se ejecuta el comando **/bin/sh** que simplemente abre la consola y a continuación finaliza dicho contenedor(realmente no vemos nada, pero el contenedor se ejecutó y terminó). 
  
 **docker run alpine /bin/sh** 
 
-<img width="574" height="81" alt="Screenshot_1" src="https://github.com/user-attachments/assets/b2595379-8f3d-4c7d-9b6b-3b30b47e34f5" /> 
+<img width="574" height="61" alt="Screenshot_1" src="https://github.com/user-attachments/assets/b2595379-8f3d-4c7d-9b6b-3b30b47e34f5" /> 
 
 7. Si lo que realmente queremos es interactuar con el intérprete de comando, en la ejecución de dicho contenedor tenemos que especificar la opción **- it** y así si podemos ejecutar comandos en dicho intérprete. (**- it** nos permite interactuar en el contenedor que ejecutamos) 
 
@@ -116,7 +116,7 @@ Si queremos salir de la consola y finalizar la ejecución de dicho contenedor ba
 
 8. Si queremos visualizar el listado de todos los contenedores que se están ejecutando actualmente usamos el comando **docker container ls** 
 
-<img width="575" height="81" alt="Screenshot_1" src="https://github.com/user-attachments/assets/069925c4-74b4-4999-bcbc-7ac709f0073d" /> 
+<img width="575" height="61" alt="Screenshot_1" src="https://github.com/user-attachments/assets/069925c4-74b4-4999-bcbc-7ac709f0073d" /> 
 
 Como podemos ver no se hace referencia a ningún contenedor porque no hay ninguno en ejecución. 
 
@@ -128,7 +128,7 @@ Como podemos ver no se hace referencia a ningún contenedor porque no hay ningun
 
 Así si ejecutamos un contenedor de la siguiente forma **docker run -it alpine /bin/ash**,  ejecutamos dentro de él el comando **echo “Hello world” > hello.txt** y listamos su contenido con **ls** y después finalizamos la ejecución de dicho contenedor, podemos ver que este contenedor no guarda relación alguna si ejecutamos otro contenedor de la misma imagen listando su contenido con **docker run alpine ls** 
 
-<img width="555" height="165" alt="Screenshot_1" src="https://github.com/user-attachments/assets/96b62675-4e44-42b2-9245-e50267c4453b" /> 
+<img width="555" height="125" alt="Screenshot_1" src="https://github.com/user-attachments/assets/96b62675-4e44-42b2-9245-e50267c4453b" /> 
 
 En la ejecución de este segundo contenedor podemos ver que no existe el archivo **hello.txt** creado en el anterior contenedor (no existe relación entre ellos) 
 
@@ -142,7 +142,7 @@ Los contenedores se ejecutan en instancias diferentes e independientes entre sí
 
 <img width="575" height="213" alt="Screenshot_1" src="https://github.com/user-attachments/assets/f6f4727e-0e7c-4231-8307-6dcfde05d872" /> 
 
-<img width="506" height="85" alt="Screenshot_1" src="https://github.com/user-attachments/assets/9cf05fae-c8d9-4eca-bdcf-cbb5da535e45" /> 
+<img width="506" height="65" alt="Screenshot_1" src="https://github.com/user-attachments/assets/9cf05fae-c8d9-4eca-bdcf-cbb5da535e45" /> 
 
 12. Con **docker container ls** listamos los contenedores que tenemos activos y
 con **docker container exec <ID> ls** lista el contenido del contenedor de ID indicado.
