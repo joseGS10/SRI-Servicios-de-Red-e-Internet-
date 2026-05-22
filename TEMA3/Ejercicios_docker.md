@@ -199,6 +199,61 @@ Los datos persisten en los contenedores y para ello, Docker nos proporciona vari
 
 <img width="575" height="93" alt="Screenshot_1" src="https://github.com/user-attachments/assets/4a905187-8b27-47c9-8276-9e6a3f204108" /> 
 
+**Ejemplo 1. Despliegue de la aplicación Guestbook** 
+
+Vamos a desplegar una aplicación web que requiere de dos servicios (web y base de datos). Dicha aplicación es servida por el puerto 5000/tcp. Utilizaremos la imagen iesgn/guestbook. Esta aplicación guarda la información en una base de datos no relacional, que utiliza el puerto 6379/tcp para conectarnos. Usaremos la imagen redis. 
+
+
+Para que los contenedores puedan encontrarse por su nombre (como si fuera una red local), primero debemos crear la red.  
+
+<img width="574" height="72" alt="Screenshot_1" src="https://github.com/user-attachments/assets/089c086a-0a1d-449c-bf00-e7daa3e35128" /> 
+
+Ahora levantamos el motor de base de datos. Usamos -v /opt/redis:/data para decirle a Docker: "Guarda los datos en la carpeta física de mi ordenador, no solo dentro del contenedor". Así, si el contenedor se borra, los datos sobreviven. 
+
+<img width="576" height="220" alt="Screenshot_1" src="https://github.com/user-attachments/assets/01b5fb58-6025-4bc4-b602-9430d2d985e1" /> 
+
+Levantamos la aplicación hecha en Python. Al usar --network red_guestbook, la app buscará automáticamente a un equipo llamado redis en esa red. El parámetro -p 80:5000 conecta el puerto 80 de tu ordenador al 5000 del contenedor.  
+
+<img width="576" height="233" alt="Screenshot_1" src="https://github.com/user-attachments/assets/5ac34b0d-1a53-4651-9b8a-c3cba3fc8114" /> 
+
+Abrimos el navegador web y entramos en la dirección http://localhost. Deberíamos ver la aplicación Guestbook cargada. Escribimos un mensaje y lo guárdamos para comprobar que la conexión a Redis funciona.  
+
+<img width="576" height="198" alt="Screenshot_1" src="https://github.com/user-attachments/assets/41b7846b-fea3-41b6-a895-64db6ea6cb8f" /> 
+
+¿Qué pasaría si, en lugar de llamar al contenedor redis, lo llamamos por ejemplo, contenedor_redis).? 
+
+Por defecto, el código fuente de esta aplicación está programado para buscar la palabra redis. Si le cambiamos el nombre al contenedor de la base de datos, la aplicación web fallará porque no lo encuentra. Para solucionarlo, Docker te permite "inyectar" una variable de entorno (-e REDIS_SERVER=contenedor_redis) en el momento de crear el contenedor web. Esto sobrescribe la configuración por defecto y le dice a la app el nuevo nombre que debe buscar. 
+
+**Ejemplo 2. Despliegue de la aplicación temperatura.**
+
+
+Este ejercicio es muy interesante porque introduce el concepto de los **microservicios** y las **aplicaciones sin estado** (stateless). Esto significa que, a diferencia del ejercicio anterior con Redis, aquí si borras los contenedores no pierdes información crítica, ya que la aplicación simplemente consulta y muestra datos, no los almacena permanentemente. 
+
+Pasos: 
+1. **Creamos la red de comunicación**: Es vital para que el frontend y el backend se encuentren por nombre (DNS interno de Docker).
+
+<img width="576" height="69" alt="Screenshot_1" src="https://github.com/user-attachments/assets/6d8b3742-7c32-4fd3-aefd-de663e7e3d03" /> 
+
+
+2. **Desplegamos el microservicio Backend (La API):** Este contenedor procesa las consultas de temperaturas. No usamos -p, por lo que queda oculto al navegador y solo accesible desde dentro de la red de Docker.
+
+<img width="575" height="205" alt="Screenshot_1" src="https://github.com/user-attachments/assets/3e0602a1-7aab-46e6-b0bf-8cdb2bb40f9f" /> 
+
+3. **Desplegamos el microservicio Frontend (La web)**: Esta es la interfaz gráfica. Publicamos el puerto 3000 interno del contenedor hacia el puerto 80 de nuestro ordenador.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
