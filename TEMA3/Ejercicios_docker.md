@@ -83,7 +83,7 @@ Si Docker no está ejecutándose, lo podemos iniciar manualmente con **sudo syst
 
 **docker image ls**  
 
-<img width="576" height="157" alt="Screenshot_1" src="https://github.com/user-attachments/assets/d2ba882b-5d9d-4ea3-9cd5-fb2a0ae9c27f" /> 
+<img width="576" height="107" alt="Screenshot_1" src="https://github.com/user-attachments/assets/d2ba882b-5d9d-4ea3-9cd5-fb2a0ae9c27f" /> 
 
 4. Ejecutamos un contenedor basado en la imagen ‘alpine’ 
 
