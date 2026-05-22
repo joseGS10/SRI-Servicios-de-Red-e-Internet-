@@ -77,7 +77,15 @@ Si Docker no está ejecutándose, lo podemos iniciar manualmente con **sudo syst
 
 **docker image pull alpine**  
 
-<img width="577" height="193" alt="Screenshot_1" src="https://github.com/user-attachments/assets/02d494c8-4693-4543-a5e6-6eb1b2e13ad3" /> 
+<img width="577" height="193" alt="Screenshot_1" src="https://github.com/user-attachments/assets/02d494c8-4693-4543-a5e6-6eb1b2e13ad3" />  
+
+3 Para listar las imágenes Docker que tenemos en nuestro sistema. 
+
+**docker image ls** 
+<img width="576" height="157" alt="Screenshot_1" src="https://github.com/user-attachments/assets/d2ba882b-5d9d-4ea3-9cd5-fb2a0ae9c27f" /> 
+
+
+
 
 
  
