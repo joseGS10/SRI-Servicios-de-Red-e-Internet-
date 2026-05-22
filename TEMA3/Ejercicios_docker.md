@@ -189,6 +189,19 @@ Los datos persisten en los contenedores y para ello, Docker nos proporciona vari
 
 <img width="575" height="95" alt="Screenshot_1" src="https://github.com/user-attachments/assets/8cd65c5c-7552-4963-beec-d55bf1e6eb54" /> 
 
+**Uso de bind mount** 
+
+16. Creamos un directorio en el sistema del host, donde crearemos un fichero index.html. Montamos ese directorio en un contenedor y comprobamos que realmente estamos sirviendo el fichero que tenemos en el directorio que hemos creado.
+
+<img width="576" height="186" alt="Screenshot_1" src="https://github.com/user-attachments/assets/d46647d0-9345-4961-b5eb-f8180ca1e68d" /> 
+
+17. Eliminamos dicho contenedor y volvemos a crear otro con el directorio montado y el resultado sigue siendo el esperado. De hecho, podemos modificar el contenido del fichero montado en el contenedor.
+
+<img width="575" height="93" alt="Screenshot_1" src="https://github.com/user-attachments/assets/4a905187-8b27-47c9-8276-9e6a3f204108" /> 
+
+
+
+
 
 
 
