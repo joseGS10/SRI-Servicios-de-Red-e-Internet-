@@ -272,7 +272,7 @@ Ahora vamos a replicar la situación del cambio de nombre para entender cómo co
 
 1. Creamos la red de WordPress
 
-<img width="576" height="77" alt="Screenshot_1" src="https://github.com/user-attachments/assets/64ccc37f-0dc1-4359-a37f-e7b24b848dd7" /> 
+<img width="576" height="47" alt="Screenshot_1" src="https://github.com/user-attachments/assets/64ccc37f-0dc1-4359-a37f-e7b24b848dd7" /> 
 
 2. Desplegamos el motor de Base de Datos (mariaDB).Podemos observar en la cantidad de variables de entorno (-e) que usamos aquí. Le estamos diciendo a MariaDB cómo se llama la base de datos, el usuario y las contraseñas antes de que arranque, para que lo configure todo automáticamente. Además, guardamos los datos en tu disco duro en /opt/mysql_wp.
 
