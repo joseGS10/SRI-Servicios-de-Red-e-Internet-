@@ -75,7 +75,8 @@ Si Docker no está ejecutándose, lo podemos iniciar manualmente con **sudo syst
 
 2 Nos descargamos la imagen ‘alpine’ (es un linux muy ligerito) del registro de Docker y la guardamos en nuestro sistema. 
 
-**docker image pull alpine** 
+**docker image pull alpine**  
+
 <img width="577" height="193" alt="Screenshot_1" src="https://github.com/user-attachments/assets/02d494c8-4693-4543-a5e6-6eb1b2e13ad3" /> 
 
 
