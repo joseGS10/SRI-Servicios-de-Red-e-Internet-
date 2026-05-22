@@ -179,7 +179,7 @@ Los datos persisten en los contenedores y para ello, Docker nos proporciona vari
 
 13. Primero creamos un volumen docker con **docker volume create miweb**
 
-<img width="575" height="83" alt="Screenshot_1" src="https://github.com/user-attachments/assets/9ac40c37-8e05-472f-bd3b-8739b0d3798f" /> 
+<img width="575" height="63" alt="Screenshot_1" src="https://github.com/user-attachments/assets/9ac40c37-8e05-472f-bd3b-8739b0d3798f" /> 
 
 14. A continuación, creamos (ejecutamos) un contenedor con el volumen asociado (usando **-v**) y creamos un fichero index.html
 
@@ -197,7 +197,7 @@ Los datos persisten en los contenedores y para ello, Docker nos proporciona vari
 
 17. Eliminamos dicho contenedor y volvemos a crear otro con el directorio montado y el resultado sigue siendo el esperado. De hecho, podemos modificar el contenido del fichero montado en el contenedor.
 
-<img width="575" height="93" alt="Screenshot_1" src="https://github.com/user-attachments/assets/4a905187-8b27-47c9-8276-9e6a3f204108" /> 
+<img width="575" height="60" alt="Screenshot_1" src="https://github.com/user-attachments/assets/4a905187-8b27-47c9-8276-9e6a3f204108" /> 
 
 **Ejemplo 1. Despliegue de la aplicación Guestbook** 
 
@@ -206,7 +206,7 @@ Vamos a desplegar una aplicación web que requiere de dos servicios (web y base 
 
 Para que los contenedores puedan encontrarse por su nombre (como si fuera una red local), primero debemos crear la red.  
 
-<img width="574" height="72" alt="Screenshot_1" src="https://github.com/user-attachments/assets/089c086a-0a1d-449c-bf00-e7daa3e35128" /> 
+<img width="574" height="42" alt="Screenshot_1" src="https://github.com/user-attachments/assets/089c086a-0a1d-449c-bf00-e7daa3e35128" /> 
 
 Ahora levantamos el motor de base de datos. Usamos -v /opt/redis:/data para decirle a Docker: "Guarda los datos en la carpeta física de mi ordenador, no solo dentro del contenedor". Así, si el contenedor se borra, los datos sobreviven. 
 
@@ -232,7 +232,7 @@ Este ejercicio es muy interesante porque introduce el concepto de los **microser
 Pasos: 
 1. **Creamos la red de comunicación**: Es vital para que el frontend y el backend se encuentren por nombre (DNS interno de Docker).
 
-<img width="576" height="69" alt="Screenshot_1" src="https://github.com/user-attachments/assets/6d8b3742-7c32-4fd3-aefd-de663e7e3d03" /> 
+<img width="576" height="39" alt="Screenshot_1" src="https://github.com/user-attachments/assets/6d8b3742-7c32-4fd3-aefd-de663e7e3d03" /> 
 
 
 2. **Desplegamos el microservicio Backend (La API):** Este contenedor procesa las consultas de temperaturas. No usamos -p, por lo que queda oculto al navegador y solo accesible desde dentro de la red de Docker.
@@ -241,7 +241,7 @@ Pasos:
 
 3. **Desplegamos el microservicio Frontend (La web)**: Esta es la interfaz gráfica. Publicamos el puerto 3000 interno del contenedor hacia el puerto 80 de nuestro ordenador.  
 
-<img width="576" height="82" alt="Screenshot_1" src="https://github.com/user-attachments/assets/d153f89b-e75c-41a4-9c25-2d8c53caea21" /> 
+<img width="576" height="62" alt="Screenshot_1" src="https://github.com/user-attachments/assets/d153f89b-e75c-41a4-9c25-2d8c53caea21" /> 
 
 4. Vamos al navegador y abrimos la aplicación.
 
@@ -253,15 +253,15 @@ Ahora vamos a replicar la situación del cambio de nombre para entender cómo co
 
 1. Borramos los contenedores actuales para liberar el puerto 80 de tu máquina física.
 
-<img width="577" height="77" alt="Screenshot_1" src="https://github.com/user-attachments/assets/f3989527-59bd-42d1-bbc6-c87f93558513" /> 
+<img width="577" height="57" alt="Screenshot_1" src="https://github.com/user-attachments/assets/f3989527-59bd-42d1-bbc6-c87f93558513" /> 
 
 2. **Desplegamos el Backend con un nombre personalizado**: Esta vez lo bautizamos como temperaturas-api.
 
-<img width="577" height="77" alt="Screenshot_1" src="https://github.com/user-attachments/assets/83bed714-030e-409b-a24d-041f0347b07b" /> 
+<img width="577" height="57" alt="Screenshot_1" src="https://github.com/user-attachments/assets/83bed714-030e-409b-a24d-041f0347b07b" /> 
 
 3. **Desplegamos el Frontend sobreescribiendo la configuración:** Usamos -e TEMP_SERVER=temperaturas-api:5000 para indicarle a la web exactamente dónde y en qué puerto debe buscar los datos ahora.
 
-<img width="575" height="75" alt="Screenshot_1" src="https://github.com/user-attachments/assets/5a609c40-968f-4538-a9ef-398d01187a45" /> 
+<img width="575" height="55" alt="Screenshot_1" src="https://github.com/user-attachments/assets/5a609c40-968f-4538-a9ef-398d01187a45" /> 
 
 4. Accedemos al navegador y verificamos.
 
