@@ -60,7 +60,13 @@ En nuestro caso usaremos los repositorios apt de Docker, para ello:
 
 **sudo systemctl status docker**  
 
-<img width="376" height="114" alt="Screenshot_1" src="https://github.com/user-attachments/assets/f5b43d9b-f5b5-43e2-9c94-10968a4d50d4" /> 
+<img width="576" height="214" alt="Screenshot_1" src="https://github.com/user-attachments/assets/f5b43d9b-f5b5-43e2-9c94-10968a4d50d4" />  
+Si Docker no está ejecutándose, lo podemos iniciar manualmente con **sudo systemctl start docker** 
+## Actividad 2. Primeros comandos. 
+
+
+1 Ejecución del primer contenedor **sudo docker run hello-world** 
+
 
 
 
