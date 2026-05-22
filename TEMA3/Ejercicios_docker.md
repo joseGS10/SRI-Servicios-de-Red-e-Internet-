@@ -149,6 +149,52 @@ con **docker container exec <ID> ls** lista el contenido del contenedor de ID in
 
 <img width="575" height="263" alt="Screenshot_1" src="https://github.com/user-attachments/assets/bd6bc499-c054-49da-98ac-3902ad81f04a" /> 
 
+## Actividad 3. Almacenamiento y redes en docker.
+
+Los contenedores son efímeros, es decir, la configuración que le proporcionamos y todos los datos y ficheros que tengamos en él prevalecen después de parar dicho contenedor. El único motivo que puede destruir su contenido es destruyendo dicho contenedor. 
+
+
+Los datos persisten en los contenedores y para ello, Docker nos proporciona varias soluciones. Entre ellas nombramos: los **volúmenes docker** y los **bind mount**. 
+
+
+**Volúmenes Docker** -> los datos se guardarán en /var/lib/docker/volumes. Este tipo de volúmenes se usan en los siguientes casos: 
+
+ para compartir datos entre volúmenes. 
+ 
+ para realizar copias de seguridad 
+ 
+ para cuando desee almacenar los datos de mi contenedor en un proveedor cloud en vez de en local. 
+ 
+
+
+**Bind mounts** -> con ello conseguimos montar el sistema de ficheros del contenedor en una parte de mi sistema de ficheros del sistema operativo. Ello nos permitirá: 
+
+ Compartir ficheros entre el host y el contenedor. 
+ 
+ Que otras aplicaciones que no sean docker tengan acceso a esos ficheros. 
+ 
+
+
+**Uso de volúmenes docker** 
+
+13. Primero creamos un volumen docker con **docker volume create miweb**
+
+<img width="575" height="83" alt="Screenshot_1" src="https://github.com/user-attachments/assets/9ac40c37-8e05-472f-bd3b-8739b0d3798f" /> 
+
+14. A continuación, creamos (ejecutamos) un contenedor con el volumen asociado (usando **-v**) y creamos un fichero index.html
+
+<img width="575" height="290" alt="Screenshot_1" src="https://github.com/user-attachments/assets/e7e308cd-3543-4f68-b3cb-819977a4b11b" /> 
+
+15. Ahora que hemos eliminado el contenedor anterior, creamos uno nuevo con el mismo volumen utilizado en el anterior y vamos a ver que no hemos perdido la información del fichero index.html
+
+<img width="575" height="95" alt="Screenshot_1" src="https://github.com/user-attachments/assets/8cd65c5c-7552-4963-beec-d55bf1e6eb54" /> 
+
+
+
+
+
+
+
 
 
 
