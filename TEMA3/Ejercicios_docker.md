@@ -81,8 +81,18 @@ Si Docker no está ejecutándose, lo podemos iniciar manualmente con **sudo syst
 
 3 Para listar las imágenes Docker que tenemos en nuestro sistema. 
 
-**docker image ls** 
+**docker image ls**  
+
 <img width="576" height="157" alt="Screenshot_1" src="https://github.com/user-attachments/assets/d2ba882b-5d9d-4ea3-9cd5-fb2a0ae9c27f" /> 
+
+4 Ejecutamos un contenedor basado en la imagen ‘alpine’ 
+**docker run alpine ls -l** 
+
+‘alpine’ es una imagen de un linux ligero que cuando se ejecute en el contenedor sacará un listado de su directorio actual y finaliza la ejecución del contenedor automáticamente. 
+
+<img width="576" height="337" alt="Screenshot_1" src="https://github.com/user-attachments/assets/119c99d1-61ca-4a6b-9738-9303e6088a93" /> 
+
+
 
 
 
