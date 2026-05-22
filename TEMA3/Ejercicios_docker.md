@@ -1,4 +1,5 @@
 
+
 # EMPEZANDO CON DOCKER
 
 ## Actividad 1. Instalación de Docker en una MV Linux Ubuntu
@@ -70,7 +71,12 @@ Si Docker no está ejecutándose, lo podemos iniciar manualmente con **sudo syst
 
 1 Ejecución del primer contenedor **sudo docker run hello-world**  
 
+<img width="577" height="201" alt="Screenshot_1" src="https://github.com/user-attachments/assets/7c64a0b7-2f33-48ad-a7a7-3b873d448957" /> 
 
+2 Nos descargamos la imagen ‘alpine’ (es un linux muy ligerito) del registro de Docker y la guardamos en nuestro sistema. 
+
+	**docker image pull alpine** 
+ 
 
 
 
